@@ -1,0 +1,48 @@
+.cnt {
+    padding-top: 10px;
+}
+.form-container {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.form-container button {
+    margin-left: 20px;
+}
+.label {
+    padding-right: 10px;
+}
+
+.buscador {
+    display: flex;
+    justify-content: center;
+}
+
+.lista-pelis {
+    display: flex;
+    flex-direction: inherit;
+    flex-wrap: wrap;
+}
+
+.fav-button {
+    display: flex;
+    background-color: #fb3640;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    width: 5rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    
+}
+
+.div-ul {
+    margin-right: 5rem;
+}

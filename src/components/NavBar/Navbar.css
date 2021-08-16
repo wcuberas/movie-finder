@@ -1,5 +1,21 @@
 .list-item {
     display: flex;
     justify-content: flex-end;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 15px;
+    width: auto;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
+}
+
+.link:hover {
+    background-color: #B2B1B9 ;
 }

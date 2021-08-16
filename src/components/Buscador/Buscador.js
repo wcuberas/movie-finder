@@ -3,11 +3,6 @@ import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import './Buscador.css';
 import { addMovieFavorite, getMovies } from '../../actions'
-import { MdFavorite } from "react-icons/md";
-
-// function Buscador() {              Misma forma pero con componente funcional
-//   [title, setTitle] = React.useState('');
-// }
 
 
 export class Buscador extends Component {
@@ -28,21 +23,25 @@ export class Buscador extends Component {
   render() {
     const { title } = this.state;
     return (
-      <div>
-        <h2 className="buscador">Busca tu pelicula...</h2>
-        <form className="form-container" onSubmit={(e) => this.handleSubmit(e)}>
+      <div className='container-general'>
+        <div className='container-buscador'>
           <div>
-            <label className="label" htmlFor="title">Película: </label>
-            <input
-              type="text"
-              id="title"
-              autoComplete="off"
-              value={title}
-              onChange={(e) => this.handleChange(e)}
-            />
+             <h2 className="buscador">Busca tu pelicula...</h2>
           </div>
-          <button type="submit">BUSCAR</button>
-        </form>
+          <form className="form-container" onSubmit={(e) => this.handleSubmit(e)}>
+            <div>
+              <label className="label" htmlFor="title">Película: </label>
+              <input
+                type="text"
+                id="title"
+                autoComplete="off"
+                value={title}
+                onChange={(e) => this.handleChange(e)}
+              />
+            </div>
+            <button className='btn btn-dark' type="submit">BUSCAR</button>
+          </form>
+        </div>
         <ul className="lista-pelis">
             {       // Aca mostramos las peliculas
               this.props.movies?.map(movie => (
@@ -50,7 +49,7 @@ export class Buscador extends Component {
                     <button className="fav-button" onClick={() => this.props.addMovieFavorite({title: movie.Title, id: movie.imdbID})}>Fav</button>
                   <Link to={`/movie/${movie.imdbID}`}>
                     {/* <span>{movie.Title}</span> */}
-                    <img src={movie.Poster} />
+                    <img src={movie.Poster} alt='movies'/>
                   </Link>
                 </div>
               ))
